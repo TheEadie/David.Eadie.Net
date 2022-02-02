@@ -2,7 +2,7 @@ module.exports = {
     future: {
       purgeLayersByDefault: true,
     },
-    purge: ["./src/**/*.html"],
+    content: ["./src/**/*.html"],
     theme: {
       container: {
           screens: {
