@@ -18,7 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^7.3.0",
+    "concurrently": "^7.4.0",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",
