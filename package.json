@@ -16,7 +16,7 @@
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.9",
+    "autoprefixer": "^10.4.10",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^7.4.0",
     "postcss": "^8.4.16",
