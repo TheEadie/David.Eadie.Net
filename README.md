@@ -2,13 +2,12 @@
 
 [My portfolio website](https://david.eadie.net)
 
-
 ## Run
 
 To start the app locally run:
 
 ```
-yarn start
+npm start
 ```
 
 This will generate the CSS classes from Tailwind CSS and then serve the contents of the `src` folder on the port displayed
