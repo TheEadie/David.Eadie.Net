@@ -11,16 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup yarn
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - run: npm install -g yarn
-
       - name: Build
         run: |
-          yarn
-          yarn build
+          npm install
+          npm run build
 
       - name: Upload build
         uses: actions/upload-artifact@v1
@@ -28,26 +22,25 @@ jobs:
           name: dist
           path: dist/
 
-
   deploy-test:
     name: Deploy to Test
     needs: build
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-    - name: Download build
-      uses: actions/download-artifact@v1
-      with:
-        name: dist
-    
-    - name: Upload
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftp.eadie.net
-        username: bot@eadie.net
-        password: ${{ secrets.ftp_password }}
-        local-dir: ./dist/
-        server-dir: ./test/
+      - name: Download build
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+
+      - name: Upload
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftp.eadie.net
+          username: bot@eadie.net
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./dist/
+          server-dir: ./test/
 
   deploy-prod:
     name: Deploy to Production
@@ -55,16 +48,16 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-    - name: Download build
-      uses: actions/download-artifact@v1
-      with:
-        name: dist
-    
-    - name: Upload
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftp.eadie.net
-        username: bot@eadie.net
-        password: ${{ secrets.ftp_password }}
-        local-dir: ./dist/
-        server-dir: ./
+      - name: Download build
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+
+      - name: Upload
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftp.eadie.net
+          username: bot@eadie.net
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./dist/
+          server-dir: ./
