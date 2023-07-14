@@ -16,7 +16,10 @@
       <!-- links -->
       {%- for link in data.links -%}
       <a class="pl-3" href="{{ link[1] }}" role="button">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <svg
+          class="w-5 h-5 fill-current hover:fill-gray-400"
+          viewBox="0 0 24 24"
+        >
           <use href="images/icons.svg#{{ link[0] }}"></use>
         </svg>
       </a>
