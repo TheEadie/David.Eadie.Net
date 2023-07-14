@@ -1,0 +1,29 @@
+<section
+  class="flex flex-col justify-between bg-gray-800 p-8 m-4 shadow-lg shadow-gray-950"
+>
+  <article class="pb-16">
+    <h4 class="text-xl font-bold text-emerald-300 pb-2">{{ data.title }}</h4>
+    <p>{{ content }}</p>
+  </article>
+  <section class="flex flex-row justify-between">
+    <ul class="flex flex-row list-inside text-gray-400">
+      <!-- technologies -->
+      {%- for tech in data.technologies -%}
+      <li class="pr-4">{{ tech }}</li>
+      {%- endfor -%}
+    </ul>
+    <div class="flex flex-row justify-end">
+      <!-- links -->
+      {%- for link in data.links -%}
+      <a class="pl-3" href="{{ link[1] }}" role="button">
+        <svg
+          class="w-5 h-5 fill-current hover:fill-gray-400"
+          viewBox="0 0 24 24"
+        >
+          <use href="images/icons.svg#{{ link[0] }}"></use>
+        </svg>
+      </a>
+      {%- endfor -%}
+    </div>
+  </section>
+</section>

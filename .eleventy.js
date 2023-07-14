@@ -1,6 +1,11 @@
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
+
 module.exports = function(eleventyConfig) {
 
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
   eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/js');
 
   eleventyConfig.addFilter("bust", (url) => {
     const [urlPart, paramPart] = url.split("?");
