@@ -1,4 +1,5 @@
 ---
+layout: personal-project.md
 title: Worms CLI
 technologies: [C#, .NET, Docker]
 tags: [personal-project]

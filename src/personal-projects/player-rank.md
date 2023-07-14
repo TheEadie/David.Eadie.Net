@@ -1,4 +1,5 @@
 ---
+layout: personal-project.md
 title: Player Rank
 technologies: [C#, .NET]
 tags: [personal-project]

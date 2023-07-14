@@ -1,7 +1,7 @@
 ---
+layout: personal-project.md
 title: Fangames.co.uk
 technologies: [PHP, MySQL, HTML, CSS]
-tags: [personal-project]
 links: [[Web, https://www.fangames.co.uk]]
 date: 2002-01-01
 ---

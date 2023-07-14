@@ -1,4 +1,5 @@
 ---
+layout: personal-project.md
 title: Music Genre Classifier
 technologies: [MatLab, SVM, Machine Learning]
 tags: [personal-project]
