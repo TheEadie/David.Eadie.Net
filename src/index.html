@@ -126,13 +126,15 @@
       </div>
       <footer>
         <div class="container mx-auto flex justify-center">
-          &#169; 2012 -
-          <script type="text/javascript">
-            document.write(new Date().getFullYear());
-          </script>
-          David Eadie
+          <span>&#169; 2012 -</span>
+          <span id="current-year"></span>
+          <span>David Eadie</span>
         </div>
       </footer>
     </div>
   </body>
+  <script>
+    document.getElementById("current-year").innerHTML =
+      "&nbsp" + new Date().getFullYear() + "&nbsp";
+  </script>
 </html>
