@@ -6,20 +6,18 @@
     <link href="{{ '/index.css' | url | bust }}" rel="stylesheet" />
     <title>David Eadie</title>
   </head>
-  <body class="bg-gray-900 font-mono text-gray-300 flex flex-col h-screen">
+  <body class="bg-gray-800 font-mono text-gray-300 flex flex-col h-screen">
     {% renderFile 'src/_includes/nav.html' %}
 
     <div class="flex-1 overflow-y-auto scroll-smooth">
       <a name="About"></a>
-      <div
-        class="container mx-auto p-4 min-h-screen-minus-nav flex flex-row items-center"
-      >
-        <div class="lg:flex lg:flex-row">
+      <div class="container mx-auto p-4 flex flex-row lg:mt-36">
+        <div class="lg:flex lg:flex-row items-center">
           <section class="p-4 lg:w-2/3">
             <h1 class="text-2xl font-bold pb-8">Hi!</h1>
             <p class="pb-8">
               I'm
-              <span class="text-xl font-bold text-green-300">David Eadie</span>,
+              <span class="text-xl font-bold text-teal-300">David Eadie</span>,
               a Software Architect based in Cambridge, UK
             </p>
             <p class="pb-2">
@@ -56,17 +54,17 @@
       </div>
 
       <a name="Portfolio"></a>
-      <div
-        class="container mx-auto p-4 min-h-screen-minus-nav flex flex-row items-center"
-      >
-        <div>
-          <h2 class="text-2xl font-bold p-4">Personal projects</h2>
-          <div class="grid md:grid-cols-2 xl:grid-cols-3 py-4">
-            {%- for project in collections.personal-project reversed -%}
-            <div>
-              {% renderFile 'src/_includes/personal-project.html', project %}
+      <div class="bg-gray-900">
+        <div class="container mx-auto p-4 flex flex-row items-center lg:mt-36">
+          <div>
+            <h2 class="text-2xl font-bold p-4">Personal projects</h2>
+            <div class="grid md:grid-cols-2 xl:grid-cols-3 py-4">
+              {%- for project in collections.personal-project reversed -%}
+              <div>
+                {% renderFile 'src/_includes/personal-project.html', project %}
+              </div>
+              {%- endfor -%}
             </div>
-            {%- endfor -%}
           </div>
         </div>
       </div>
