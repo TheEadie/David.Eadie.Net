@@ -4,49 +4,22 @@
       <li class="pr-4 text-xl font-bold text-white">
         <a href="#About" class="">David Eadie</a>
       </li>
+      {%- for section in sections -%}
       <li class="hidden md:block md:pr-4 hover:text-gray-400">
-        <a href="#About">About</a>
+        <a href="{{ section.url }}">{{ section.title }}</a>
       </li>
-      <li class="hidden md:block md:pr-4 hover:text-gray-400">
-        <a href="#Portfolio">Portfolio</a>
-      </li>
+      {%- endfor -%}
     </ul>
     <ul class="flex flex-row items-center">
+      {%- for social in social-media -%}
       <li class="pl-3">
-        <a href="https://www.github.com/TheEadie">
+        <a href="{{ social.url }}">
           <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#GitHub" />
+            <use href="images/icons.svg#{{ social.icon }}" />
           </svg>
         </a>
       </li>
-      <li class="pl-3">
-        <a href="https://www.linkedin.com/in/david-eadie-0789a637">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#LinkedIn" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://twitter.com/TechLeadie">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#Twitter" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://www.facebook.com/David.Eadie">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#Facebook" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://www.instagram.com/the.eadie/">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#Instagram" />
-          </svg>
-        </a>
-      </li>
+      {%- endfor -%}
     </ul>
   </nav>
 </div>
