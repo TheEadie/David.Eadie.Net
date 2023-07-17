@@ -12,41 +12,9 @@
       </li>
     </ul>
     <ul class="flex flex-row items-center">
-      <li class="pl-3">
-        <a href="https://www.github.com/TheEadie">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#GitHub" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://www.linkedin.com/in/david-eadie-0789a637">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#LinkedIn" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://twitter.com/TechLeadie">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#Twitter" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://www.facebook.com/David.Eadie">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#Facebook" />
-          </svg>
-        </a>
-      </li>
-      <li class="pl-3">
-        <a href="https://www.instagram.com/the.eadie/">
-          <svg class="w-5 h-5 fill-current hover:fill-gray-400">
-            <use href="images/icons.svg#Instagram" />
-          </svg>
-        </a>
-      </li>
+      {%- for social in social-media reversed -%}
+      <div>{% renderFile 'src/_includes/social-media.html', social %}</div>
+      {%- endfor -%}
     </ul>
   </nav>
 </div>
