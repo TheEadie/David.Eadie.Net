@@ -23,7 +23,6 @@ jobs:
           path: dist/
 
   deploy-test:
-    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Deploy to Test
     needs: build
     runs-on: ubuntu-latest
