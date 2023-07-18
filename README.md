@@ -14,7 +14,7 @@ This will generate the CSS classes from Tailwind CSS and then serve the contents
 
 ## Test
 
-All pushes to branches will trigger a release to [the staging area](https://david.eadie.net/test). The latest push will win.
+All pushes to branches will trigger a release to [the staging area](https://david-test.eadie.net). The latest push will win.
 
 ## Release
 
