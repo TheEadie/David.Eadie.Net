@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="{{ 'index.css' | url | bust }}" rel="stylesheet" />
     <title>David Eadie</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ '/images/favicon-32x32.png' | url | bust }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ '/images/favicon-16x16.png' | url | bust }}"
+    />
   </head>
   <body class="bg-gray-900 font-mono text-gray-300 flex flex-col h-screen">
     {% renderFile 'src/_includes/nav.html', nav %}
