@@ -28,7 +28,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: test
+      name: Test
       url: https://david-test.eadie.net
     steps:
       - name: Download build
@@ -46,10 +46,13 @@ jobs:
           server-dir: ./
 
   deploy-prod:
+    if: github.ref == 'refs/heads/main'
     name: Deploy to Production
     needs: deploy-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    environment:
+      name: Production
+      url: https://david.eadie.net
     steps:
       - name: Download build
         uses: actions/download-artifact@v1
@@ -59,8 +62,8 @@ jobs:
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.eadie.net
-          username: bot@eadie.net
-          password: ${{ secrets.ftp_password }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: ./
