@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: test
-      url: https://david.eadie.net/test
+      url: https://david-test.eadie.net
     steps:
       - name: Download build
         uses: actions/download-artifact@v1
@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: ./test/
+          server-dir: ./
 
   deploy-prod:
     name: Deploy to Production
