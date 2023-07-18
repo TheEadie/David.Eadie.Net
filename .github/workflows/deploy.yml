@@ -23,10 +23,13 @@ jobs:
           path: dist/
 
   deploy-test:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Deploy to Test
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    environment:
+      name: test
+      url: https://david.eadie.net/test
     steps:
       - name: Download build
         uses: actions/download-artifact@v1
@@ -36,9 +39,9 @@ jobs:
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.eadie.net
-          username: bot@eadie.net
-          password: ${{ secrets.ftp_password }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: ./test/
 
