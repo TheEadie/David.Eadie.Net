@@ -1,0 +1,136 @@
+[
+  {
+    "title": "Advent of Code",
+    "content": "Solutions to the annual advent of code challenge",
+    "technologies": [
+      "C#",
+      "TypeScript"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/theeadie/advent-of-code",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Worms CLI",
+    "content": "A CLI for managing Worms Armageddon configuration formats and replays.",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Docker"
+    ],
+    "links": [
+      {
+        "url": "https://hub.docker.com/r/theeadie/wormscli",
+        "icon": "/icons.svg#DockerHub"
+      },
+      {
+        "url": "https://github.com/theeadie/WormsLeague",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Player Rank",
+    "content": "A C# library to track Elo rankings of players in multiplayer games.",
+    "technologies": [
+      "C#",
+      ".NET"
+    ],
+    "links": [
+      {
+        "url": "http://www.nuget.org/packages/PlayerRank",
+        "icon": "/icons.svg#NuGet"
+      },
+      {
+        "url": "https://github.com/theeadie/PlayerRank",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Worms Hub",
+    "content": "An API to upload, process and show stats about replays for Worms Armageddon",
+    "technologies": [
+      ".NET",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/theeadie/WormsLeague",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Raspberry Pi K8s Cluster",
+    "content": "The configuration for my home Kubernetes cluster. The cluster is made up of 4 Raspberry Pis and runs a variety of services including Jellyfin, PiHole, Home Assistant, Grafana, Loki and Prometheus.",
+    "technologies": [
+      "Kubernetes",
+      "FluxCD"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/theeadie/k8s-cluster",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Nest Exporter",
+    "content": "A Prometheus metrics exporter for Nest thermostats using the Google Device Access API.",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Docker"
+    ],
+    "links": [
+      {
+        "url": "https://hub.docker.com/r/theeadie/nest-exporter",
+        "icon": "/icons.svg#DockerHub"
+      },
+      {
+        "url": "https://github.com/theeadie/NestExporter",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Wonderland",
+    "content": "A Chip-8 interpreter.",
+    "technologies": [
+      "C#",
+      ".NET"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/theeadie/wonderland",
+        "icon": "/icons.svg#GitHub"
+      }
+    ]
+  },
+  {
+    "title": "Music Genre Classifier",
+    "content": "My final year dissertation. Automatically determine the genre of a piece of music by analysing its waveform.",
+    "technologies": [
+      "MatLab",
+      "SVM",
+      "AI"
+    ],
+    "links": []
+  },
+  {
+    "title": "Fangames.co.uk",
+    "content": "A website I built and maintained in my teenage years. The site was dedicated to making games celebrating the click and point adventures of the 90s. The site enjoyed a cult following and was once mentioned in PC Gamer magazine.",
+    "technologies": [
+      "PHP",
+      "MySQL",
+      "HTML",
+      "CSS"
+    ],
+    "links": []
+  }
+]
