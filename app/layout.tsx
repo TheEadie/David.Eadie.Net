@@ -6,6 +6,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>David Eadie</title>
+      </head>
       <body className="bg-gray-900 font-mono text-gray-300 flex flex-col h-screen">
         <div className="bg-gray-950">
           <nav className="container mx-auto p-4 h-16 flex flex-row justify-between">
