@@ -23,6 +23,7 @@ jobs:
           path: out/
 
   deploy-test:
+    if: github.ref != 'refs/heads/main'
     name: Deploy to Test
     needs: build
     runs-on: ubuntu-latest
