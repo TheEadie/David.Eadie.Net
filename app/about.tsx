@@ -51,7 +51,7 @@ export default function About() {
           </section>
           <section className="py-16 lg:p-4 lg:w-1/3">
             <Image
-              className="mx-auto shadow-lg shadow-gray-950"
+              className="mx-auto shadow-lg shadow-gray-950 rounded-3xl"
               src="/me.jpg"
               alt="A photo of David Eadie"
               width={400}
