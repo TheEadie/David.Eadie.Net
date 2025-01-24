@@ -48,7 +48,7 @@ jobs:
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     name: Deploy to Production
-    needs: deploy-test
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: Production
