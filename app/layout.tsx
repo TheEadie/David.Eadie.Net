@@ -26,6 +26,13 @@ export default function RootLayout({
                   </svg>
                 </a>
               </li>
+              <li className="pl-3">
+                <a href="https://www.linkedin.com/in/david-eadie-0789a637">
+                  <svg className="w-5 h-5 fill-current hover:fill-gray-400">
+                    <use href="icons.svg#LinkedIn" />
+                  </svg>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
