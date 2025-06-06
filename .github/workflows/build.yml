@@ -1,0 +1,23 @@
+name: Build and Test
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: out/
