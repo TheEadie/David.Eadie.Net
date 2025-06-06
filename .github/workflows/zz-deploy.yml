@@ -1,0 +1,38 @@
+name: ZZ - Deploy
+
+on:
+  workflow_call:
+    inputs:
+        environment:
+          description: 'The environment to deploy to'
+          required: true
+          type: string
+        url:
+          description: 'The URL of the environment'
+          required: true
+          type: string
+
+jobs:
+  deploy:
+    name: Deploy to ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment }}
+      url: ${{ inputs.url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Upload
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ./

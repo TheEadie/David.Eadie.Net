@@ -1,0 +1,13 @@
+name: Deploy - Staging
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Staging
+    uses: ./.github/workflows/zz-deploy.yml
+    secrets: inherit
+    with:
+      environment: Test
+      url: https://david-test.eadie.net
