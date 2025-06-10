@@ -35,7 +35,7 @@ export default function About() {
             </p>
             <p className="pb-8">
               {
-                "I've been working in software development for over 10 years. I'm currently bringing DevOps processes to the database at Redgate Software."
+                "I've been working in software development for over 15 years. I'm currently bringing DevOps processes to the database at Redgate Software."
               }
             </p>
             <p className="pb-2">
